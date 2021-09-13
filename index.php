@@ -9,6 +9,10 @@ if (strlen($slash) > 0)
 <!doctype html>
 <html lang="en">
 <head>
+    <meta property="og:title" content="Free Simple URL Shortener"/>
+    <meta property="og:url" content="https://s.reisminer.xyz"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="Create short-urls for free and very simple!"/>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
