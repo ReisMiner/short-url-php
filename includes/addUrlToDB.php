@@ -9,11 +9,11 @@ if (isset($_POST['long']) and isset($_POST['short'])) {
     $checkRes = inputCheck($_POST['short'], $long);
     if ($checkRes[0]) {
 
-//        $res = hcaptchaCheck($_POST['captcha']);
-//        if (!$res['success']) {
-//            echo json_encode(array("status" => "captcha-failure"));
-//            die();
-//        }
+        $res = hcaptchaCheck($_POST['captcha']);
+        if (!$res['success']) {
+            echo json_encode(array("status" => "captcha-failure"));
+            die();
+        }
         $conn = new mysqli($db_host, $db_user, $db_pw, $db_db);
         if ($conn->connect_error) {
             echo json_encode(array("status" => "sql-connect-failure"));

@@ -20,22 +20,19 @@ if (strlen($slash) > 0)
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-<h1>ReisMiner Short URL Service</h1>
-<h2>Create Shorturls for Free</h2>
-<form id="urlForm">
+<main>
+    <h1>ReisMiner Short URL Service</h1>
+    <h2>Create Shorturls for Free</h2>
     <input name="long" id="input-long" type="text" placeholder="Long URL">
     <input name="short" id="input-short" type="text" placeholder="Short string (optional)">
-    <span id="captcha" class="h-captcha" data-sitekey="af47fc96-46be-45e9-b7c3-bfcc9f14a85e" data-theme="dark"></span>
+    <div id="captcha" class="h-captcha" data-sitekey="af47fc96-46be-45e9-b7c3-bfcc9f14a85e" data-theme="dark"></div>
     <a id="submitURL">Register Short URL</a>
-</form>
-<div id="notification">
-    <p class="error"></p>
-    <div class="success">
-        <h3>URL successfully Shortened!</h3>
-        <a id="displayURL"></a>
-        <a id="urlCopy">Click to Copy URL</a>
+    <p class="error">Captcha Invalid</p>
+    <div style="text-align: center">
+        <h3 class="success">URL successfully Shortened!</h3>
+        <a class="success" id="displayURL">https://s.reisminer.xyz/abcdef</a>
     </div>
-</div>
-
+    <a class="success" id="urlCopy">Click to Copy URL</a>
+</main>
 </body>
 </html>

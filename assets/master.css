@@ -1,16 +1,81 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
-*{
+
+* {
     padding: 0;
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
 }
-body{
+
+:root {
+    --bgColor: #0e0e0e;
+    --textColor: #fdfdfd;
+    --focusColor: #b2b2b2;
+    --successColor: #41ff3a;
+    --successColorActive: #2fbe2b;
+    --errorColor: #FF006E;
+    --accentColor: #0eb4ff;
+    --accentColorActive: #0c88bd;
+}
+
+main {
+    margin-top:100px;
+    margin-bottom:100px;
+    border: var(--accentColor) solid 4px;
+    border-radius: 50px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+body {
     background-color: #0e0e0e;
     color: #fdfdfd;
+    display: grid;
+    place-items: center;
 }
-.success{
-    display: none;
+
+input {
+    background-color: var(--bgColor);
+    border: var(--textColor) solid 2px;
+    color: var(--textColor);
+    padding: 20px;
+    border-radius: 100px;
+    font-size: 20px;
+    outline: none;
 }
-.error{
+
+input:focus {
+    border: var(--focusColor) solid 2px;
+
+}
+
+#submitURL{
+    margin-top: 20px;
+    background-color: var(--bgColor);
+    border: var(--accentColor) solid 4px;
+    color: var(--textColor);
+    padding: 20px;
+    border-radius: 100px;
+    font-size: 20px;
+    outline: none;
+}
+#submitURL:active{
+    border: var(--accentColorActive) solid 4px;
+
+}
+
+.success {
     display: none;
+    color: var(--successColor);
+    text-decoration: none;
+}
+
+.error {
+    display: none;
+    color: var(--errorColor);
+}
+#urlCopy:active{
+    color: var(--successColorActive);
 }

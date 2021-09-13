@@ -22,7 +22,7 @@ function addUrlToDB() {
             if (result.status === "success") {
                 short.val("");
                 long.val("");
-                console.log(result.shortLink)
+                $(".error").css("display", "none");
                 $("#displayURL").attr("href", result.shortLink);
                 $("#displayURL").text(result.shortLink);
                 $("#urlCopy").on("click", function () {
@@ -32,15 +32,19 @@ function addUrlToDB() {
 
 
             } else if (result.status === "captcha-failure") {
+                $(".success").css("display", "none");
                 $(".error").text("Captcha is not valid!")
                 $(".error").css("display", "block");
             } else if (result.status === "sql-failure") {
+                $(".success").css("display", "none");
                 $(".error").text("Internal Error: Database Failure. Write ReisMiner#1111 on Discord and report the issue!")
                 $(".error").css("display", "block");
             } else if (result.status === "input-wrong") {
+                $(".success").css("display", "none");
                 $(".error").text("Please enter a Valid URL")
                 $(".error").css("display", "block");
             } else if (result.status === "sql-connect-failure") {
+                $(".success").css("display", "none");
                 $(".error").text("Internal Error: Cannot connect to Database. Write ReisMiner#1111 on Discord and report the issue!")
                 $(".error").css("display", "block");
             }

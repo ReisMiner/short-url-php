@@ -10,13 +10,14 @@ function redirectIfAvailable($redirectKey)
     $query = "SELECT * FROM shorturl.links WHERE url_key = '$redirectKey'";
     $result = mysqli_query($conn, $query);
     $row = mysqli_fetch_row($result);
-    $conn->close();
     if ($row == null) {
         header("Location: http://" . $_SERVER['HTTP_HOST']);
     } else {
         $redirectTo = $row[1];
+        $conn->query("UPDATE shorturl.links SET hits=hits+1 WHERE url_key='$redirectKey'");
         header("Location: " . $redirectTo);
     }
+    $conn->close();
     die();
 
 }
