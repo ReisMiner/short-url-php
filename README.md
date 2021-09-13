@@ -16,5 +16,5 @@ $hcaptcha_secret = "0xH-CAPTCHA SECRET!!!";
 $webhost = "YOUR-DOMAIN. E.G: https://s.reisminer.xyz/"
 ```
 - optional change the error messages in ./assets/main.js
-- make a database with one table called `links`. The table has following Columns: `url_key, long_url, hits, added_by_ip, added_at_date`.
+- make a database with one table called `links`. The table has following Columns: `url_key [varchar(16)], long_url [text], hits [int], added_by_ip [varchar(30)], added_at_date [datetime]`.
 - last step: upload to a webserver and enjoy!
