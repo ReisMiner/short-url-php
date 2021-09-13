@@ -2,6 +2,8 @@
 A self-made URL shortener written in PHP and JavaScript.
 Has a captcha validation and tracks the hits for each link.
 
+Live Demo here: https://s.reisminer.xyz
+
 # How to self host?
 
 - Clone this repo
