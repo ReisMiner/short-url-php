@@ -13,7 +13,8 @@ $db_host = "DATABASE-HOST";
 $db_db = "DATABASE-NAME";
 
 $hcaptcha_secret = "0xH-CAPTCHA SECRET!!!";
-$webhost = "YOUR-DOMAIN. E.G: s.reisminer.xyz"
+$webhost = "YOUR-DOMAIN. E.G: https://s.reisminer.xyz/"
 ```
 - optional change the error messages in ./assets/main.js
+- make a database with one table called `links`. The table has following Columns: `url_key, long_url, hits, added_by_ip, added_at_date`.
 - last step: upload to a webserver and enjoy!
