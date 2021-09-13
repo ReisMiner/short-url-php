@@ -25,7 +25,7 @@ if (isset($_POST['long']) and isset($_POST['short'])) {
 
         $query = "INSERT INTO shorturl.links(url_key,long_url, added_by_ip, added_at_date) VALUES ('$short_string','$long_url','$ip',now())";
         if ($conn->query($query) === TRUE) {
-            echo json_encode(array("status" => "success", "shortLink" => "https://s.reisminer.xyz/".$short_string));
+            echo json_encode(array("status" => "success", "shortLink" => $webhost.$short_string));
         } else {
             echo json_encode(array("status" => "sql-failure"));
         }

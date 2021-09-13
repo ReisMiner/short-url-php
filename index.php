@@ -32,7 +32,7 @@ if (strlen($slash) > 0)
     <p class="error"></p>
     <div class="success">
         <h3>URL successfully Shortened!</h3>
-        <a id="displayURL" href=""></a>
+        <a id="displayURL"></a>
         <a id="urlCopy">Click to Copy URL</a>
     </div>
 </div>
