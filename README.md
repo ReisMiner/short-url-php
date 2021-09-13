@@ -13,6 +13,7 @@ $db_host = "DATABASE-HOST";
 $db_db = "DATABASE-NAME";
 
 $hcaptcha_secret = "0xH-CAPTCHA SECRET!!!";
+$webhost = "YOUR-DOMAIN. E.G: s.reisminer.xyz"
 ```
-- change every "s.reisminer.xyz" to your domain
+- optional change the error messages in ./assets/main.js
 - last step: upload to a webserver and enjoy!
